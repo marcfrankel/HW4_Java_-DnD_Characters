@@ -19,9 +19,10 @@ public class Rogue extends Character {
     }
 
     public String toString() {
-        return String.format("Level %s rogue named %s with %s strength, " +
-         "%s dexterity, %s intelligence, and %s wisdom.", getLevel(), getName(),
-         getStrength(), getDexterity(), getIntelligence(), getWisdom());
+        return String.format("Level %s rogue named %s with %s strength, "
+            + "%s dexterity, %s intelligence, and %s wisdom.", getLevel(),
+            getName(), getStrength(), getDexterity(), getIntelligence(),
+            getWisdom());
     }
 
     public void attack(Character c) {

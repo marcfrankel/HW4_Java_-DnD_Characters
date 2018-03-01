@@ -19,9 +19,10 @@ public class Wizard extends Character {
     }
 
     public String toString() {
-        return String.format("Level %s wizard named %s with %s strength, " +
-         "%s dexterity, %s intelligence, and %s wisdom.", getLevel(), getName(),
-         getStrength(), getDexterity(), getIntelligence(), getWisdom());
+        return String.format("Level %s wizard named %s with %s strength, "
+            + "%s dexterity, %s intelligence, and %s wisdom.", getLevel(),
+            getName(), getStrength(), getDexterity(), getIntelligence(),
+            getWisdom());
     }
 
     public void multiAttack(Character ... c) {

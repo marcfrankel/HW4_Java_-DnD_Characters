@@ -84,7 +84,7 @@ public abstract class Character {
     public void setHealth(int health) {
         if (health > level * 5) {
             this.health = level * 5;
-        } else if(health < 0) {
+        } else if (health < 0) {
             this.health = 0;
             setIsDead(true);
         } else {

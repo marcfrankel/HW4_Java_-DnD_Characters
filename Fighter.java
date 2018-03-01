@@ -20,9 +20,10 @@ public class Fighter extends Character {
     }
 
     public String toString() {
-        return String.format("Level %s fighter named %s with %s strength, " +
-         "%s dexterity, %s intelligence, and %s wisdom.", getLevel(), getName(),
-         getStrength(), getDexterity(), getIntelligence(), getWisdom());
+        return String.format("Level %s fighter named %s with %s strength, "
+            + "%s dexterity, %s intelligence, and %s wisdom.", getLevel(),
+            getName(), getStrength(), getDexterity(), getIntelligence(),
+            getWisdom());
     }
 
     public void attack(Character c) {
