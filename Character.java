@@ -19,71 +19,63 @@ public abstract class Character {
     }
 
     public String getName() {
-        //implement this method
-        return null;
+        return name;
     }
 
     public int getLevel() {
-        //implement this method
-        return 0;
+        return level;
     }
 
     public void setLevel(int level) {
-        //implement this method
+        this.level = level;
     }
 
     public int getStrength() {
-        //implement this method
-        return 0;
+        return strength;
     }
 
     public void setStrength(int strength) {
-        //implement this method
+        this.strength = strength;
     }
 
     public int getDexterity() {
-        //implement this method
-        return 0;
+        return dexterity;
     }
 
     public void setDexterity(int dexterity) {
-        //implement this method
+        this.dexterity = dexterity;
     }
 
     public int getIntelligence() {
-        //implement this method
-        return 0;
+        return intelligence;
     }
 
     public void setIntelligence(int intelligence) {
-        //implement this method
+        this.intelligence = intelligence;
     }
 
     public int getWisdom() {
-        //implement this method
-        return 0;
+        return wisdom;
     }
 
     public void setWisdom(int wisdom) {
-        //implement this method
+        this.wisdom = wisdom;
     }
 
     public int getHealth() {
-        //implement this method
-        return 0;
+        return health;
     }
 
     public void setHealth(int health) {
-        //implement this method
+        this.health = health;
     }
 
     public boolean getIsDead() {
-        //implement this method
-        return false;
+        return isDead;
     }
 
     public void setIsDead(boolean isDead) {
-        //implement this method
+        this.isDead = isDead;
     }
 
     public abstract void levelUp();
