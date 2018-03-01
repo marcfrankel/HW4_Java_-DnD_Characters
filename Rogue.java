@@ -1,12 +1,11 @@
-public class Fighter extends Character {
-
-    public Fighter(String name, int level,
+public class Rogue extends Character {
+    public Rogue(String name, int level,
                      int strength, int dexterity,
                      int intelligence, int wisdom) {
         super(name, level, strength, dexterity, intelligence, wisdom);
     }
 
-    public Fighter(String name, int seed) {
+    public Rogue(String name, int seed) {
         super(name, seed);
     }
 
@@ -14,13 +13,13 @@ public class Fighter extends Character {
         setLevel(getLevel() + 1);
         setHealth(getLevel() * 5);
         setStrength(getStrength() + 2);
-        setDexterity(getDexterity() + 1);
-        setIntelligence(getIntelligence() + 1);
-        setWisdom(getWisdom() + 1);
+        setDexterity(getDexterity() + 3);
+        setIntelligence(getIntelligence() + 2);
+        setWisdom(getWisdom() + 2);
     }
 
     public String toString() {
-        return String.format("Level %s fighter named %s with %s strength, " +
+        return String.format("Level %s rogue named %s with %s strength, " +
          "%s dexterity, %s intelligence, and %s wisdom.", getLevel(), getName(),
          getStrength(), getDexterity(), getIntelligence(), getWisdom());
     }
@@ -30,7 +29,7 @@ public class Fighter extends Character {
         if (c.getIsDead()) {
             System.out.println("Cannot attack a dead character");
         } else {
-            c.setHealth(c.getHealth() - (10 + getStrength()));
+            c.setHealth(c.getHealth() - (6 + getDexterity()));
         }
     }
 }
