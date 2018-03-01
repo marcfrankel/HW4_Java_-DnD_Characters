@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public abstract class Character {
     private String name;
     private int level;
@@ -9,13 +11,26 @@ public abstract class Character {
     private boolean isDead = false;
 
     public Character(String name, int seed) {
-        //implement this constructor using constructor delegation
+        Random generator = new Random(seed);
+        this.name = name;
+        this.level = 1;
+        this.strength = generator.nextInt(6) + 1;
+        this.dexterity = generator.nextInt(6) + 1;
+        this.intelligence = generator.nextInt(6) + 1;
+        this.wisdom = generator.nextInt(6) + 1;
     }
 
     public Character(String name, int level,
                      int strength, int dexterity,
                      int intelligence, int wisdom) {
-        //implement this constructor
+        this.name = name;
+        this.level = level;
+        this.strength = strength;
+        this.dexterity = dexterity;
+        this.intelligence = intelligence;
+        this.wisdom = wisdom;
+        setHealth(level * 5);
+
     }
 
     public String getName() {
@@ -67,7 +82,11 @@ public abstract class Character {
     }
 
     public void setHealth(int health) {
-        this.health = health;
+        if (health > level * 5) {
+            this.health = level * 5;
+        } else {
+            this.health = health;
+        }
     }
 
     public boolean getIsDead() {
