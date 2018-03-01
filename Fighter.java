@@ -26,7 +26,6 @@ public class Fighter extends Character {
     }
 
     public void attack(Character c) {
-        int my_stength = getStrength();
         if (c.getIsDead()) {
             System.out.println("Cannot attack a dead character");
         } else {
