@@ -19,6 +19,7 @@ public class Fighter extends Character {
         setWisdom(getWisdom() + 1);
     }
 
+
     public String toString() {
         return String.format("Level %s fighter named %s with %s strength, "
             + "%s dexterity, %s intelligence, and %s wisdom.", getLevel(),
